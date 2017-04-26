@@ -14,6 +14,7 @@
 		99977E8F1EB0560900B31AF1 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99977E8E1EB0560900B31AF1 /* Cartography.framework */; };
 		99977E911EB0564D00B31AF1 /* NiceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99977E901EB0564D00B31AF1 /* NiceKit.framework */; };
 		99977E971EB0580500B31AF1 /* Hue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99977E961EB0580500B31AF1 /* Hue.framework */; };
+		99B610141EB05D830098F69C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B610131EB05D830098F69C /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		99977E8E1EB0560900B31AF1 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/Mac/Cartography.framework; sourceTree = "<group>"; };
 		99977E901EB0564D00B31AF1 /* NiceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NiceKit.framework; path = Carthage/Build/Mac/NiceKit.framework; sourceTree = "<group>"; };
 		99977E961EB0580500B31AF1 /* Hue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hue.framework; path = Carthage/Build/Mac/Hue.framework; sourceTree = "<group>"; };
+		99B610131EB05D830098F69C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				99977E891EB0557B00B31AF1 /* ColorPickerViewController.xib */,
 				99977E721EB054E100B31AF1 /* NiceUI.h */,
 				99977E731EB054E100B31AF1 /* Info.plist */,
+				99B610131EB05D830098F69C /* Media.xcassets */,
 			);
 			path = NiceUI;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B610141EB05D830098F69C /* Media.xcassets in Resources */,
 				99977E8C1EB0557B00B31AF1 /* ColorPickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

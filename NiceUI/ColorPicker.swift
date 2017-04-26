@@ -11,7 +11,11 @@ import NiceKit
 
 public class ColorPicker: NSView {
     
-    let pickerController = ColorPickerViewController(nibName: "ColorPickerViewController", bundle: nil)!
+    let pickerController: ColorPickerViewController = {
+        let bundle = Bundle(identifier: "tech.median.NiceUI")
+        return ColorPickerViewController(nibName: "ColorPickerViewController", bundle: bundle)!
+    }()
+    
     var popover: NSPopover?
     
     public var colors = [NSColor]() {

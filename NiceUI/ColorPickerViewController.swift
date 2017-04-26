@@ -129,7 +129,10 @@ class ColorView: NSView {
         self.layer = CALayer()
         self.wantsLayer = true
         
-        let checkImage = #imageLiteral(resourceName: "CheckSmall").tintedImageWithColor(color: NSColor.white)
+        let bundle = Bundle(identifier: "tech.median.NiceUI")!
+        let checkSmall = bundle.image(forResource: "CheckSmall")!
+        
+        let checkImage = checkSmall.tintedImageWithColor(color: NSColor.white)
         checkImageView = NSImageView()
         checkImageView.image = checkImage
         

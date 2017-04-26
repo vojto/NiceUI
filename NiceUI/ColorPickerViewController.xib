@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ColorPickerViewController" customModule="Median" customModuleProvider="target">
+            <connections>
+                <outlet property="autoButton" destination="F5P-AD-N5t" id="uik-Ab-POQ"/>
+                <outlet property="stackRows" destination="tBg-y9-PQY" id="CdB-eG-tyL"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F5P-AD-N5t">
+                    <rect key="frame" x="8" y="245" width="464" height="19"/>
+                    <buttonCell key="cell" type="roundRect" title="Automatic" bezelStyle="roundedRect" image="CheckSmall" imagePosition="left" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FKW-md-8Qr">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="cellTitle"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="selectAuto:" target="-2" id="xPQ-DR-cFJ"/>
+                    </connections>
+                </button>
+                <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tBg-y9-PQY">
+                    <rect key="frame" x="8" y="8" width="464" height="230"/>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="F5P-AD-N5t" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="5hp-I0-t2V"/>
+                <constraint firstAttribute="bottom" secondItem="tBg-y9-PQY" secondAttribute="bottom" constant="8" id="HNg-hz-MNt"/>
+                <constraint firstItem="tBg-y9-PQY" firstAttribute="top" secondItem="F5P-AD-N5t" secondAttribute="bottom" constant="8" id="OCP-NE-qY5"/>
+                <constraint firstAttribute="trailing" secondItem="F5P-AD-N5t" secondAttribute="trailing" constant="8" id="Sfh-Ut-vku"/>
+                <constraint firstItem="tBg-y9-PQY" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="e6y-RI-Z9W"/>
+                <constraint firstItem="F5P-AD-N5t" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="k21-xZ-kfH"/>
+                <constraint firstAttribute="trailing" secondItem="tBg-y9-PQY" secondAttribute="trailing" constant="8" id="pXV-uJ-4Lg"/>
+            </constraints>
+        </customView>
+    </objects>
+    <resources>
+        <image name="CheckSmall" width="10" height="9"/>
+    </resources>
+</document>

@@ -16,7 +16,6 @@ fileprivate let checkSmall = bundle.image(forResource: "CheckSmall")!
 
 class ColorPickerViewController: NSViewController {
     
-    
     @IBOutlet weak var stackRows: NSStackView!
     
     var colorViews = [ColorView]()

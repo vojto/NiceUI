@@ -11,6 +11,9 @@ import Cartography
 import NiceKit
 import Hue
 
+fileprivate let bundle = Bundle(identifier: "tech.median.NiceUI")!
+fileprivate let checkSmall = bundle.image(forResource: "CheckSmall")!
+
 class ColorPickerViewController: NSViewController {
     
     
@@ -99,7 +102,7 @@ class ColorPickerViewController: NSViewController {
             }
             
         } else {
-            autoButton?.image = #imageLiteral(resourceName: "CheckSmall")
+            autoButton?.image = checkSmall
         }
     }
 }
@@ -128,9 +131,6 @@ class ColorView: NSView {
         
         self.layer = CALayer()
         self.wantsLayer = true
-        
-        let bundle = Bundle(identifier: "tech.median.NiceUI")!
-        let checkSmall = bundle.image(forResource: "CheckSmall")!
         
         let checkImage = checkSmall.tintedImageWithColor(color: NSColor.white)
         checkImageView = NSImageView()

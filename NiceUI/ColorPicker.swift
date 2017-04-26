@@ -9,18 +9,18 @@
 import Foundation
 import NiceKit
 
-class ColorPicker: NSView {
+public class ColorPicker: NSView {
     
     let pickerController = ColorPickerViewController(nibName: "ColorPickerViewController", bundle: nil)!
     var popover: NSPopover?
     
-    var colors = [NSColor]() {
+    public var colors = [NSColor]() {
         didSet {
             pickerController.colors = colors
         }
     }
     
-    var selectedColor: NSColor? { didSet {
+    public var selectedColor: NSColor? { didSet {
         updateColorLayer()
         updatePopover()
     } }
@@ -28,17 +28,17 @@ class ColorPicker: NSView {
     var isDisabled = false { didSet { updateColorLayer() } }
     var colorLayer: CALayer?
     
-    var onChange: ((NSColor?) -> ())?
+    public var onChange: ((NSColor?) -> ())?
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         pickerController.onSelect = handleSelectColor
     }
     
-    override func viewDidMoveToWindow() {
+    public override func viewDidMoveToWindow() {
         createLayers()
     }
     
-    override func viewDidChangeBackingProperties() {
+    public override func viewDidChangeBackingProperties() {
         createLayers()
     }
     
@@ -142,7 +142,7 @@ class ColorPicker: NSView {
     }
     
  
-    override func mouseDown(with event: NSEvent) {
+    public override func mouseDown(with event: NSEvent) {
         if isDisabled {
             return
         }
@@ -152,7 +152,7 @@ class ColorPicker: NSView {
         
     }
     
-    override func mouseUp(with event: NSEvent) {
+    public override func mouseUp(with event: NSEvent) {
         if isDisabled {
             return
         }

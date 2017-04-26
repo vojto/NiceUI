@@ -25,7 +25,7 @@ public class ColorPicker: NSView {
         updatePopover()
     } }
     var isPressed = false { didSet { updateColorLayer() } }
-    var isDisabled = false { didSet { updateColorLayer() } }
+    public var isDisabled = false { didSet { updateColorLayer() } }
     var colorLayer: CALayer?
     
     public var onChange: ((NSColor?) -> ())?

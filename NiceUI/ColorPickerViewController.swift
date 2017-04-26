@@ -24,6 +24,12 @@ class ColorPickerViewController: NSViewController {
     
     @IBOutlet weak var autoButton: NSButton?
     
+    var wantsAuto: Bool = true {
+        didSet {
+            autoButton?.isHidden = !wantsAuto
+        }
+    }
+    
     var onSelect: ((NSColor?) -> ())?
 
     override func viewDidLoad() {

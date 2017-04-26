@@ -30,7 +30,11 @@ public class ColorPicker: NSView {
     } }
     var isPressed = false { didSet { updateColorLayer() } }
     public var isDisabled = false { didSet { updateColorLayer() } }
-    public var wantsAuto = true
+    public var wantsAuto = true {
+        didSet {
+            pickerController.wantsAuto = wantsAuto
+        }
+    }
     
     var colorLayer: CALayer?
     

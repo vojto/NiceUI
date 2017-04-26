@@ -176,7 +176,7 @@ public class ColorPicker: NSView {
         if self.popover == nil {
             let popover = NSPopover()
             popover.contentViewController = pickerController
-            popover.contentSize = NSSize(width: 170, height: 76)
+            popover.contentSize = NSSize(width: 170, height: wantsAuto ? 76 : 60)
             popover.animates = false
             popover.behavior = .transient
             

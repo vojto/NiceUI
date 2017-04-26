@@ -26,7 +26,7 @@ class ColorPickerViewController: NSViewController {
     
     var wantsAuto: Bool = true {
         didSet {
-            autoButton?.isHidden = !wantsAuto
+            updateAutoButton()
         }
     }
     
@@ -34,7 +34,8 @@ class ColorPickerViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        updateAutoButton()
         
         let rows = 2
         let columns = 4
@@ -90,6 +91,10 @@ class ColorPickerViewController: NSViewController {
         updateUI(withColor: nil)
         
         onSelect?(nil)
+    }
+    
+    func updateAutoButton() {
+        autoButton?.isHidden = !wantsAuto
     }
     
     func updateUI(withColor color: NSColor?) {

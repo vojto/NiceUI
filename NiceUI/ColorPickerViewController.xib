@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="ColorPickerViewController" customModule="Median" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="ColorPickerViewController" customModule="NiceUI" customModuleProvider="target">
             <connections>
                 <outlet property="autoButton" destination="F5P-AD-N5t" id="uik-Ab-POQ"/>
                 <outlet property="stackRows" destination="tBg-y9-PQY" id="CdB-eG-tyL"/>
@@ -20,28 +20,44 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F5P-AD-N5t">
-                    <rect key="frame" x="8" y="245" width="464" height="19"/>
-                    <buttonCell key="cell" type="roundRect" title="Automatic" bezelStyle="roundedRect" image="CheckSmall" imagePosition="left" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FKW-md-8Qr">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="cellTitle"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="selectAuto:" target="-2" id="xPQ-DR-cFJ"/>
-                    </connections>
-                </button>
-                <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tBg-y9-PQY">
-                    <rect key="frame" x="8" y="8" width="464" height="230"/>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brS-Mo-cWy">
+                    <rect key="frame" x="8" y="8" width="464" height="256"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F5P-AD-N5t">
+                            <rect key="frame" x="0.0" y="237" width="464" height="19"/>
+                            <buttonCell key="cell" type="roundRect" title="Automatic" bezelStyle="roundedRect" image="CheckSmall" imagePosition="left" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FKW-md-8Qr">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="cellTitle"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="selectAuto:" target="-2" id="xPQ-DR-cFJ"/>
+                            </connections>
+                        </button>
+                        <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tBg-y9-PQY">
+                            <rect key="frame" x="0.0" y="0.0" width="464" height="230"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tBg-y9-PQY" firstAttribute="leading" secondItem="brS-Mo-cWy" secondAttribute="leading" id="3Lv-6Q-mLM"/>
+                        <constraint firstItem="F5P-AD-N5t" firstAttribute="leading" secondItem="brS-Mo-cWy" secondAttribute="leading" id="6NL-wL-ddo"/>
+                        <constraint firstAttribute="trailing" secondItem="tBg-y9-PQY" secondAttribute="trailing" id="OSt-Lz-R35"/>
+                        <constraint firstAttribute="trailing" secondItem="F5P-AD-N5t" secondAttribute="trailing" id="YpY-7X-Zc3"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="F5P-AD-N5t" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="5hp-I0-t2V"/>
-                <constraint firstAttribute="bottom" secondItem="tBg-y9-PQY" secondAttribute="bottom" constant="8" id="HNg-hz-MNt"/>
-                <constraint firstItem="tBg-y9-PQY" firstAttribute="top" secondItem="F5P-AD-N5t" secondAttribute="bottom" constant="8" id="OCP-NE-qY5"/>
-                <constraint firstAttribute="trailing" secondItem="F5P-AD-N5t" secondAttribute="trailing" constant="8" id="Sfh-Ut-vku"/>
-                <constraint firstItem="tBg-y9-PQY" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="e6y-RI-Z9W"/>
-                <constraint firstItem="F5P-AD-N5t" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="k21-xZ-kfH"/>
-                <constraint firstAttribute="trailing" secondItem="tBg-y9-PQY" secondAttribute="trailing" constant="8" id="pXV-uJ-4Lg"/>
+                <constraint firstAttribute="bottom" secondItem="brS-Mo-cWy" secondAttribute="bottom" constant="8" id="0eY-qg-3kR"/>
+                <constraint firstItem="brS-Mo-cWy" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="QXp-hr-Fzd"/>
+                <constraint firstItem="brS-Mo-cWy" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="S05-rK-CPP"/>
+                <constraint firstAttribute="trailing" secondItem="brS-Mo-cWy" secondAttribute="trailing" constant="8" id="dOJ-ci-qGX"/>
             </constraints>
         </customView>
     </objects>

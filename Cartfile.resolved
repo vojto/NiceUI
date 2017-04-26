@@ -1,2 +1,3 @@
+github "hyperoslo/Hue" "2.0.1"
 github "robb/Cartography" "1.1.0"
-github "vojto/NiceKit" "28c33c100c20dc098f5518eed67537e03c433ea7"
+github "vojto/NiceKit" "629c77a6db5852813f0f69ac556f2fd053ea9a6d"

@@ -13,6 +13,7 @@
 		99977E8C1EB0557B00B31AF1 /* ColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99977E891EB0557B00B31AF1 /* ColorPickerViewController.xib */; };
 		99977E8F1EB0560900B31AF1 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99977E8E1EB0560900B31AF1 /* Cartography.framework */; };
 		99977E911EB0564D00B31AF1 /* NiceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99977E901EB0564D00B31AF1 /* NiceKit.framework */; };
+		99977E971EB0580500B31AF1 /* Hue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99977E961EB0580500B31AF1 /* Hue.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		99977E891EB0557B00B31AF1 /* ColorPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPickerViewController.xib; sourceTree = "<group>"; };
 		99977E8E1EB0560900B31AF1 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/Mac/Cartography.framework; sourceTree = "<group>"; };
 		99977E901EB0564D00B31AF1 /* NiceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NiceKit.framework; path = Carthage/Build/Mac/NiceKit.framework; sourceTree = "<group>"; };
+		99977E961EB0580500B31AF1 /* Hue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hue.framework; path = Carthage/Build/Mac/Hue.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			files = (
 				99977E8F1EB0560900B31AF1 /* Cartography.framework in Frameworks */,
 				99977E911EB0564D00B31AF1 /* NiceKit.framework in Frameworks */,
+				99977E971EB0580500B31AF1 /* Hue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +74,7 @@
 		99977E8D1EB0560900B31AF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99977E961EB0580500B31AF1 /* Hue.framework */,
 				99977E901EB0564D00B31AF1 /* NiceKit.framework */,
 				99977E8E1EB0560900B31AF1 /* Cartography.framework */,
 			);
@@ -282,6 +286,7 @@
 				INFOPLIST_FILE = NiceUI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.median.NiceUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -307,6 +312,7 @@
 				INFOPLIST_FILE = NiceUI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.median.NiceUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

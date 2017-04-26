@@ -9,6 +9,7 @@
 import Cocoa
 import Cartography
 import NiceKit
+import Hue
 
 class ColorPickerViewController: NSViewController {
     
